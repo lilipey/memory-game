@@ -2,6 +2,9 @@
   font-family: Agentorange;
   src: url(Fonts/agent_orange/AGENTORANGE.TTF);
 }
+*{
+    font-family: Agentorange;
+  }
 html{
     margin: 3px;
     padding: 0;
@@ -9,10 +12,7 @@ html{
     justify-content: center;
     align-items: center;
   }
-  *{
-    font-family: Agentorange;
-  }
-  body{
+body{
     display : flex;
     justify-content: center;
     align-items: center;
