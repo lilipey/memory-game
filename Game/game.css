@@ -2,7 +2,6 @@
   font-family: Agentorange;
   src: url(Fonts/agent_orange/AGENTORANGE.TTF);
 }
-
 html{
     margin: 3px;
     padding: 0;
@@ -55,10 +54,13 @@ section{
     margin: 10px;
     transform-style: preserve-3d;
     transform: rotateY(180deg);
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     border-radius: 10px;
     box-shadow: 5px  5px grey;
     
+}
+.safari {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .toggleCard{
     transform: rotate(360deg);
