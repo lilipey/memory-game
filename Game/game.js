@@ -1,6 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const difficulty = urlParams.get('difficulty');
 const num = urlParams.get('numCards');
+var is_safari = navigator.userAgent.indexOf("Safari") > -1;
 
 const section = document.querySelector("section");
 const wins = document.querySelector(".wins")
@@ -138,6 +139,8 @@ const cardGenerator = () => {
     card.classList.add("card");
     back.classList.add("back");
     face.classList.add("face");
+    if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+      card.classList.add("safari");}
     face.src = item.image;
     card.setAttribute("name", item.name);
     card.appendChild(face);
@@ -248,3 +251,4 @@ const endGame = () => {
 countdown();
 cardGenerator();
 heartGenerator();
+
