@@ -1,6 +1,6 @@
 @font-face {
   font-family: Agentorange;
-  src: url(Fonts/agent_orange/AGENTORANGE.TTF);
+  src: url(..Fonts/agent_orange/AGENTORANGE.TTF);
 }
 *{
     font-family: Agentorange;
