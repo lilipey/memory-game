@@ -1,0 +1,199 @@
+@font-face {
+  font-family: Agentorange;
+  src: url(Fonts/agent_orange/AGENTORANGE.TTF);
+}
+
+html{
+    margin: 3px;
+    padding: 0;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+  }
+  *{
+    font-family: Agentorange;
+  }
+  body{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    background: #d4f7dc;
+    background-image: linear-gradient(120deg, #a1eafb 0%, #d4f7dc 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+section{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 2px;
+    margin: 0 auto; 
+    background-color: #fff;
+    border-radius: 10px;
+}
+  
+.face, 
+.back{
+    width: 100%;
+    height : 100%;
+    position : absolute;
+   
+}
+.face{
+    backface-visibility: hidden;
+    pointer-events: none;
+}
+.card {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background-image: url("../images/earth.jpg");
+    background-size: 150px;
+    background-position: center;
+    border-radius: 10px;
+    margin: 10px;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 10px;
+    box-shadow: 5px  5px grey;
+    
+}
+.toggleCard{
+    transform: rotate(360deg);
+    box-shadow: 5px 5px  grey;
+}
+img{
+  border-radius: 10px;
+}
+.text{
+  display: flex;
+
+}
+.time{
+  flex-direction: left;
+  padding: 10px;
+}
+.moves{
+  padding: 5px;
+}
+.matchedCard {
+  animation: change-scale 0.5s linear forwards;
+  
+} 
+@keyframes change-scale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    
+  }
+}
+.wrong {
+  animation: shake 0.5s;
+}
+
+
+@keyframes shake {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  75% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+.win{
+    position: relative;
+    transform: translateY(50%); /* center horizontally */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px grey;
+    animation: change-scale 0.5s linear forwards;
+}
+
+#start-over, #change-level{
+  background: #51A3B8;
+  font-size: 10px;
+  color: white;
+  border-radius: 7px;
+  box-shadow: 0 7px 0px #387796;
+  display: inline-block;
+  transition: all .2s;
+  padding: 15px 25px;
+  top: 0;
+  cursor: pointer;
+  border: none;
+}
+#start-over:active, #change-level:active{
+  box-shadow: 0 2px 0px #387796;
+  transition: all .2s;
+  border: none;
+}
+.button{
+  display: inline-flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+#start-over {
+  margin-right: 10px;
+  margin-top: 15px;
+}
+#change-level {
+  margin-left: 10px;
+  margin-top: 15px;
+}
+.heart{
+  width: 3%;
+}
+.img{
+  display: flex;
+}
+#heart-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*to avoid the section to move*/
+section:hover, section:focus {
+  outline: none;
+}
+@media only screen and (max-width: 600px) { 
+  *{
+    font-size: 15px;
+  }
+  section{
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+  }
+  .card{
+      width: 60px;
+      height: 80px;
+      background-size: 95px;
+  }
+  .heart{
+    width: 5%;
+  }
+}
+

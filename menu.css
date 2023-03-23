@@ -1,0 +1,276 @@
+@font-face {
+  font-family: Agentorange;
+  src: url(Fonts/agent_orange/AGENTORANGE.TTF);
+}
+
+*{
+    font-family: Agentorange ;
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/background/fond.PNG);
+  background-size: 100vmax;
+  background-repeat: no-repeat;
+}
+
+span{
+    color: red;
+}
+
+.level-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  
+  .level-button {
+    display: block;
+    width: 150px;
+    padding: 15px 25px;
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+.easy {
+  background-color: #8BC34A;
+}
+
+.medium {
+  background-color: #FFC107;
+}
+
+.hard {
+  background-color: #F44336;
+}
+
+.level-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.level-button.selected{
+  background-color: white;
+  color: #000;
+  outline: none;
+
+}
+
+.difficulte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button1, .button2, .button3{
+       padding: 10px;
+       margin: 30px;
+   
+}
+.color-button {
+    background-color: white;
+    padding: 10px;
+    margin: 30px;
+}
+.color-button.selected {
+    background-color: red;
+}
+
+.carte-option {
+    display: inline-flex;
+    align-self: center;
+}
+
+.choix-des-cartes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+}
+h3{
+    display: block;
+    margin-bottom: auto;
+    align-self: center;
+}
+h4{
+    align-self: center;
+}
+   
+#modal {
+   display: none; /* La fenêtre modale est cachée par défaut */
+   position: fixed;
+   width: 120%;
+   z-index: 1;
+   overflow: auto;
+}
+ /*permet la pop up des règles de s'afficher*/
+#modal-content {
+   background-color: #fefefe;
+   padding-left: 10px;
+   padding-right: 10px;
+   border: 1px solid #888;
+}
+#regle{
+    width: 100%;
+}
+#close-button {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+   
+#close-button:hover,
+#close-button:focus {
+       color: black;
+       text-decoration: none;
+       cursor: pointer;
+     }
+.fond{
+    display: flex;
+    background-image: url(regle.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    top : 60vh;
+    transform: translateY(-50%);
+    position: relative;
+}
+.cat{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin-right: 560px;
+    margin-bottom: 20px;
+}
+.dice{
+    width: 20%;
+}
+.lancer-partie{
+    background: #51A3B8;
+    font-size: 10px;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 0 7px 0px #387796;
+    display: inline-block;
+    transition: all .2s;
+    padding: 15px 25px;
+    top: 0;
+    cursor: pointer;
+    margin:0 20px;
+    border: none;
+}
+.lancer-partie:active {
+    top: 3px;
+    box-shadow: 0 2px 0px #387796;
+    transition: all .2s;
+    border: none;
+}
+#start-over {
+    margin-right: 10px;
+  }
+  #change-level {
+    margin-left: 10px;
+  }
+
+@media only screen and (max-width: 700px){
+  
+  
+  body {
+    font-size: 16px;
+    background-image: url(images/background/fond3.png);
+    background-size: cover;
+  }
+
+  
+  .level-buttons {
+    flex-direction: row;
+  }
+  .color-button{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .level-button {
+    width: 120px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+  }
+  .cat {
+    visibility: hidden;
+  }
+  .dice {
+    width: 30%;
+  }
+  .lancer-partie {
+    font-size: 8px;
+    padding: 10px 20px;
+  }
+  #start-over {
+    margin-right: 5px;
+  }
+  #change-level {
+    margin-left: 5px;
+  }
+.fond{
+  transform: translateY(-60%);
+  
+}
+}
+
+
+
+@media only screen and (min-width: 800px) and (max-width: 1000px){
+
+  .color-button{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+.fond {
+    transform: translateY(-80%);
+}
+  .level-buttons {
+    flex-direction: row;
+  }
+  .level-button {
+    width: 120px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 16px;
+  }
+  .cat {
+    visibility: hidden;
+  }
+  .dice {
+    width: 30%;
+  }
+  .lancer-partie {
+    font-size: 8px;
+    padding: 10px 20px;
+  }
+  #start-over {
+    margin-right: 5px;
+  }
+  #change-level {
+    margin-left: 5px;
+  }
+
+}

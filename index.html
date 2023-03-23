@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    
+    <div class="fond">   
+        <img class="dice" src="images/dice.png">
+        <img class="cat" id="myImage" src="images/animals/cat.png" style="opacity: 1;">
+        <button id="rules-button">Rules of the game</button>
+        <div id="modal">
+        <div id="modal-content">
+            <span id="close-button">&times;</span>
+            <img src="images/regle_du_jeu_de_memory_rapide_et_simple.jpg" alt="rules" id="regle">
+        </div>
+        </div>
+        <div class="difficulte">
+            <h2>Difficulty</h2>
+            <button class="color-carre level-button hard" id="carre1">hard</button>
+            <button class="color-carre level-button medium" id="carre2">medium</button>
+            <button class="color-carre level-button easy" id="carre3">easy</button>
+        </div>
+        <div class="choix-des-cartes">
+            <h3>Choice of the cards</h3>
+            <div class="carte-option">
+                <button class="color-button" id="button1" ></button>
+                <h4><span>12</span> cards</h4>
+                <button class="color-button" id="button2"></button>
+                <h4><span>20</span> cards</h4>
+                <button class="color-button" id="button3"></button>
+                <h4><span>30</span> cards</h4>
+            </div>
+        </div>
+        <button class="lancer-partie">Play</button>
+        <script src="menu.js"></script>
+    </div>
+    </body>
+</html>
