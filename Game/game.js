@@ -50,7 +50,7 @@ if (difficulty == "carre1") {
     gameTime = 80; // Time in seconds
     timeLeft = gameTime;
   } else {
-    playerLives = 5;
+    playerLives = 11;
     gameTime = 100; // Time in seconds
     timeLeft = gameTime;
   }
