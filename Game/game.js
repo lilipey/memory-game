@@ -125,7 +125,7 @@ if (num == "button1") {
   numCards = 20;
 } else {
   numCards = 30;
-  section.style.gridTemplateColumns = "repeat(6, auto)";
+  section.style.gridTemplateColumns = "repeat(8, auto)";
 }
 
 // function to generate the cards
